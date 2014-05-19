@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>自动刷新配置工具</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="" rel="stylesheet">
+<script src="js/jquery-1.7.1.min.js"></script>
+
+<style>
+body {
+    font-size: 12px;
+}
+.main {
+    width: 300px;
+
+    padding: 5px;
+}
+.setting {
+    resize: none;
+    width: 300px;
+    height: 150px;
+}
+.right {
+    text-align: right;
+}
+.livereload {
+    width: 300px;
+}
+</style>
+</head>
+<body>
+    <div class="main">
+        <p>Livereload:<br/><input type="text" class="livereload" value="http://127.0.0.1:35729/livereload.js"></p>
+        <p>在下面域名中追加livereload.js<br/>
+        <textarea class="setting" placeholder="www.kjson.com"></textarea></p>
+    </div>
+</body>
+<script src="js/init.js"></script>
+</html>
