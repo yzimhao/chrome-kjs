@@ -26,4 +26,6 @@ chrome-livereload 是一款chrome浏览器下，web开发辅助插件，减少�
 ###配置好watch任务之后，执行下面命令
     grunt watch
 
+###插件安装
+下载文件到本地解压后，找到dist目录下chrome-livereload.crx文件，拖拽致chrome浏览器安装，该插件同时也能安装在新版本的360急速浏览器上。
 安装好chrome插件，修改chrome-livereload插件配置，试试修改php，js等文件，浏览器是否会自动刷新
