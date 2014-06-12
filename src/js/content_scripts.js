@@ -8,10 +8,12 @@
 
     var creatlivereload = function(a){
         if(! document.getElementById("livereload") ){
+            var c = document.getElementsByTagName("head")[0];
             var sc = document.createElement("script");
             sc.id = "livereload";
             sc.src = a;
-            document.body.appendChild(sc);
+            // document.body.appendChild(sc);
+            c.insertBefore(sc, c.firstChild)
         }
         console.log("加载livereload");
     }
