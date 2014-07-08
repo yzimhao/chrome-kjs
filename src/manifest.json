@@ -1,9 +1,9 @@
 {
   "manifest_version": 2,
 
-  "name": "Livereload",
-  "description": "结合grunt-watch，在指定域名的页面中加载livereload.js",
-  "version": "1.1",
+  "name": "chrome-inject",
+  "description": "chrome插件，在网页中注入js脚本",
+  "version": "1.12",
 
   "permissions": [
     "http://*/*", "https://*/*", "tabs"

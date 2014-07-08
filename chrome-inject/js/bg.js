@@ -1,0 +1,1 @@
+function read_setting(){var s=localStorage.setting||"";return s.split("<e>")}chrome.extension.onMessage.addListener(function(req){var setting=read_setting(),livereload=localStorage.livereload;"yes"==req.getsetting&&(console.log("前端来获取setting"),chrome.tabs.getSelected(null,function(tabs){chrome.tabs.sendMessage(tabs.id,{setting:setting,livereload:livereload},function(){})}))});

@@ -1,0 +1,29 @@
+{
+  "manifest_version": 2,
+
+  "name": "chrome-inject",
+  "description": "chrome插件，在网页中注入js脚本",
+  "version": "1.12",
+
+  "permissions": [
+    "http://*/*", "https://*/*", "tabs"
+  ],
+
+
+  "content_scripts": [{
+       "matches": ["http://*/*", "https://*/*"],
+       "js": ["js/content_scripts.js"],
+       "run_at": "document_end",
+       "all_frames": true
+  }],
+
+  "background": {
+      "page": "background.html"
+  },
+
+
+  "browser_action": {
+    "default_icon": "images/icon.png",
+    "default_popup": "popup.html"
+  }
+}
