@@ -3,12 +3,15 @@
 
   "name": "chrome-inject",
   "description": "chrome插件，在网页中注入js脚本",
-  "version": "1.12",
+  "version": "1.13",
 
   "permissions": [
-    "http://*/*", "https://*/*", "tabs"
+    "contextMenus",
+    "tabs",
+    "notifications",
+    "cookies",
+    "webNavigation"
   ],
-
 
   "content_scripts": [{
        "matches": ["http://*/*", "https://*/*"],

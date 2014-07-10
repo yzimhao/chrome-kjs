@@ -4,7 +4,7 @@
  * @date    2014-05-19 16:25:40
  * @version $Id$
  */
-
+var DEBUG = true;
 
 
 function TransferString(content, flag){
@@ -16,12 +16,40 @@ function TransferString(content, flag){
     return string;
 }
 
-function save_setting(setting){
-    localStorage['setting'] = setting;
+function save_setting(){
+    var inject = $(".inject").val();
+    var cache = $("input[name=cache]:checked").val();
+    var domain = $(".domain").val();
+
+
+    localStorage['inject'] = inject;
+    localStorage['cache'] = cache;
+
+    domain = TransferString(domain, '<e>');
+    localStorage['domain'] = domain;
+
+    if(DEBUG){
+        console.log(localStorage);
+    }
 }
 
 function read_setting(){
-    return localStorage['setting'] || '';
+    $(".inject").val(localStorage['inject']);
+    var cache = localStorage['cache'] || "no";
+
+    $(".cache-"+ cache).attr('checked', true);
+
+
+
+    var domain = localStorage['domain'];
+    if(domain){
+        domain = domain.replace(/\<e\>/g, "\r\n");
+        $(".domain").val(domain);
+    }
+
+    if(DEBUG){
+        console.log(localStorage);
+    }
 }
 
 
@@ -31,25 +59,16 @@ function read_setting(){
 
 (function(w, $, undefined){
 
-    $(".livereload").live('blur', function(){
-        localStorage['livereload'] = $(this).val();
+    $(".save").click(function(){
+        console.log(this);
+        save_setting();
     });
 
-    $(".setting").live('blur', function(){
-        var a = $(this).val();
-        a = TransferString(a, '<e>');
-        save_setting(a);
-    })
 
-    //初始化
-    if(localStorage['livereload']){
-        $(".livereload").val(localStorage['livereload']);
-    }
 
-    var s = read_setting();
-    if( s ){
-        s = s.replace(/\<e\>/g, "\r\n");
-        $(".setting").val(s)
+    //init
+    if(localStorage['inject']){
+        read_setting();
     }
 
 

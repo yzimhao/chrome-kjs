@@ -5,8 +5,15 @@
  * @version $Id$
  */
 function read_setting(){
-    var s = localStorage['setting'] || '';
-    return s.split("<e>");
+    var domain = localStorage['domain'] || '';
+    var inject = localStorage['inject'] || '';
+    var cache = localStorage['cache'];
+
+    return {
+        inject: inject,
+        cache: cache,
+        domain: domain.split("<e>")
+    }
 }
 
 
@@ -14,15 +21,13 @@ function read_setting(){
 
 
 //后台接收消息
-chrome.extension.onMessage.addListener(function(req, sender, sendResponse) {
-    var setting = read_setting();
-    var livereload = localStorage['livereload'];
+chrome.extension.onMessage.addListener(function(request, sender, sendResponse) {
+    if(request.type == 'setting'){
+        var setting = read_setting();
 
-
-    if(req.getsetting == 'yes'){
-        console.log("前端来获取setting");
+        
         chrome.tabs.getSelected(null, function(tabs) {
-            chrome.tabs.sendMessage(tabs.id, {'setting': setting, 'livereload': livereload}, function(){ });
+            chrome.tabs.sendMessage(tabs.id, setting);
         });
     }
 
