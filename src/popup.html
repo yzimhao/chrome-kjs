@@ -1,72 +1,43 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="utf-8">
-<title>setting</title>
-<meta name="description" content="">
-<meta name="keywords" content="">
-<link href="" rel="stylesheet">
-<script src="js/jquery-1.7.1.min.js"></script>
 
-<style>
-body, div, p, ul, li, h1, h2,h3,h4,h5,h6 {
-    margin: 0;
-    padding: 0;
-}
+  <head>
+    <meta charset="UTF-8">
+    <script src="/statics/js/vue.min.js"></script>
+    <script src="/statics/js/qrcode.min.js"></script>
+    <title></title>
+    <style>
+    body {
+      font-size: 16px;
+      background-color: #ecf6fb;
+      color: #26a2ff;
+    }
+    .container {
+      width: 700px;
+      height: 300px;
+    }
+    .input-url {
+      width: 300px;
+      height: 24px;
+    }
+    #qr {
+      position: fixed;
+      top:3px;
+      right: 3px;
+    }
+    </style>
+  </head>
 
-body {
-    font-size: 12px;
-}
+  <body>
+    <div class="container">
+      <div id="setting">
+        <span>注入地址: </span>
+        <input class="input-url" type="text" v-model="input_url" placeholder="http://"/>
+        {{input_url}}
 
-.main {
-    padding: 2px;
-}
-.domain {
-    resize: none;
-    width: 300px;
-    height: 150px;
-}
-.right {
-    text-align: right;
-}
-.inject {
-    width: 300px;
-}
-.list {
-    margin-top: 10px;
-}
-.item {
-    height: 20px;
-    line-height: 20px;
-}
-</style>
-</head>
-<body>
-    <div class="main">
-
-
-        <div class="list">
-            <div class="item"><h6>注入地址:</h6></div>
-            <div><input type="text" class="inject" value="" placeholder="http://127.0.0.1:35729/livereload.js"></div>
-        </div>
-
-        <div class="list">
-            <div class="item"><h6>注入地址缓存:</h6></div>
-            <div>
-                <input type="radio" name="cache" id="cache-yes" class="cache-yes" value="yes"><label for="cache-yes">开启</label>
-                <input type="radio" name="cache" id="cache-no" class="cache-no" value="no"><label for="cache-no">关闭</label>
-            </div>
-        </div>
-
-        <div class="list">
-            <div class="item"><h6>过滤域名:</h6></div>
-            <div><textarea class="domain" placeholder="www.kjson.com"></textarea></div>
-        </div>
-        
-        <div class="list">
-            <button class="save">保存</button>
-        </div>
+        <div id="qr"></div>
+      </div>
     </div>
-</body>
-<script src="js/init.js"></script>
+  </body>
+  <script src="/statics/js/popup.js"></script>
 </html>
