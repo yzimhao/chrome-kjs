@@ -2,6 +2,7 @@
   "name": "chrome-kjs",
   "description": "chrome插件，在任意网页中注入一段js脚本或在引入一个css文件。",
   "version": "0.0.2",
+  "manifest_version": 2,
 
   "permissions": [
     "contextMenus",
