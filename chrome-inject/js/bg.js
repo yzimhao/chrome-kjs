@@ -1,1 +1,0 @@
-function read_setting(){var domain=localStorage.domain||"",inject=localStorage.inject||"",cache=localStorage.cache;return{inject:inject,cache:cache,domain:domain.split("<e>")}}chrome.extension.onMessage.addListener(function(request){if("setting"==request.type){var setting=read_setting();chrome.tabs.getSelected(null,function(tabs){chrome.tabs.sendMessage(tabs.id,setting)})}});

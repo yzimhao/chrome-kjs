@@ -1,9 +1,8 @@
 {
+  "name": "chrome-kjs",
+  "description": "Web开发辅助插件，集成二维码、常见的加密方法...",
+  "version": "0.0.6-0",
   "manifest_version": 2,
-
-  "name": "chrome-inject",
-  "description": "chrome插件，在网页中注入js脚本",
-  "version": "1.13",
 
   "permissions": [
     "contextMenus",
@@ -15,7 +14,7 @@
 
   "content_scripts": [{
        "matches": ["http://*/*", "https://*/*"],
-       "js": ["js/content_scripts.js"],
+       "js": ["statics/js/content.js"],
        "run_at": "document_end",
        "all_frames": true
   }],
@@ -26,7 +25,7 @@
 
 
   "browser_action": {
-    "default_icon": "images/icon.png",
+    "default_icon": "statics/images/favicon.png",
     "default_popup": "popup.html"
   }
 }
