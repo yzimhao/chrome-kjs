@@ -4,11 +4,16 @@
   chrome.runtime.onMessage.addListener(function(message, sender, sendResponse){
     var qrcode = new QRCode("qr", {
       text: message.url,
-      width: 177,
-      height: 177,
+      width: 200,
+      height: 200,
       colorDark : "#000000",
       colorLight : "#ffffff",
       correctLevel : QRCode.CorrectLevel.L
     });
   });
+
+  document.getElementById('github').onclick = function(){
+    chrome.tabs.create({url: document.getElementById('github').href});
+  };
+  
 })();

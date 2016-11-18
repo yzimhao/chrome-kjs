@@ -1,7 +1,7 @@
 {
   "name": "chrome-kjs",
-  "description": "chrome插件，在任意网页中注入一段js脚本或在引入一个css文件。",
-  "version": "0.0.2",
+  "description": "Web开发辅助插件，集成二维码、常见的加密方法...",
+  "version": "0.0.6-0",
   "manifest_version": 2,
 
   "permissions": [
@@ -23,9 +23,9 @@
       "page": "background.html"
   },
 
- 
+
   "browser_action": {
-    "default_icon": "statics/images/icon.png",
+    "default_icon": "statics/images/favicon.png",
     "default_popup": "popup.html"
   }
 }

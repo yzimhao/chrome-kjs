@@ -13,29 +13,27 @@
       color: #26a2ff;
     }
     .container {
-      width: 700px;
-      height: 300px;
+      width: 200px;
+      height: 230px;
     }
-    .input-url {
-      width: 300px;
-      height: 24px;
-    }
-    #qr {
+
+    .powerby {
       position: fixed;
-      top:3px;
-      right: 3px;
+      width: 20px;
+      height: 15px;
+      right: 20px;
+      bottom: 3px;
+      font-size: 10px;
     }
     </style>
   </head>
 
   <body>
     <div class="container">
-      <div id="setting">
-        <span>注入地址: </span>
-        <input class="input-url" type="text" v-model="input_url" placeholder="http://"/>
-        {{input_url}}
+      <div id="qr"></div>
 
-        <div id="qr"></div>
+      <div class="powerby">
+        <a id="github" href="http://www.github.com/yzimhao/chrome-kjs">Star</a>
       </div>
     </div>
   </body>

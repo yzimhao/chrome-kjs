@@ -1,7 +1,7 @@
 {
   "name": "chrome-kjs",
-  "keywords": "chrome插件，网页注入js",
-  "version": "0.0.2",
+  "keywords": "chrome插件",
+  "version": "0.0.6-0",
   "email": "yzimhao@126.com",
   "dependencies": {
     "gulp-bump": "^2.5.0"
