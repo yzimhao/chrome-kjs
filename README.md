@@ -13,8 +13,13 @@ Screenshot
 
 ---
 
+### 安装
+
+打开chrome浏览器“扩展程序”,选中右上角“开发者模式”，“加载已解压的扩展程序”,选中到当前项目的src目录即可。
+
+---
+
 
 
 ### 感谢
-
 - [qrcode](https://github.com/davidshimjs/qrcodejs)
