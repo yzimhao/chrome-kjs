@@ -1,7 +1,7 @@
 {
   "name": "chrome-kjs",
   "keywords": "chrome插件",
-  "version": "0.0.8",
+  "version": "0.1.0",
   "email": "yzimhao@126.com",
   "dependencies": {
     "gulp-bump": "^2.5.0"
