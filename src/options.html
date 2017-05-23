@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Extension Options</title>
+    <style>
+        body: {
+            padding: 10px;
+        }
+        #save {
+            margin-top: 10px;
+        }
+        .tips {
+            font-size: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="option">
+        <h3>搜索</h3>
+        选择搜索引擎：
+        <select id="search">
+            <option value="0">关闭</option>
+            <option value="1">百度</option>
+            <option value="2">Google</option>
+        </select>
+        <span class="tips">鼠标选中文本，第二个快捷搜索入口</span>
+    </div>
+
+    <h3>播放器</h3>
+    直接播放hls地址：
+    <label>
+        <input type="checkbox" id="playhls"> 开
+    </label>
+
+    <div id="status"></div>
+    <button id="save">Save</button>
+
+    <script src="statics/js/options.js"></script>
+</body>
+
+</html>
