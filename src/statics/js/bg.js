@@ -42,4 +42,15 @@
     });
 
 
+
+    // m3u8
+    chrome.webRequest.onBeforeRequest.addListener(function(info){
+            var playerurl = chrome.extension.getURL('player.html') + "?" + encodeURIComponent(info.url);
+            chrome.tabs.update(info.tabId, {url: playerurl});
+            return {cancel: true}
+        },
+        {urls: ["*://*/*.m3u8*"], types:["main_frame"]},
+        ['blocking']
+    );
+
 })();
