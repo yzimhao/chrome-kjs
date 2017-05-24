@@ -1,5 +1,8 @@
 {
-    "search": {
+    "search1": {
         "message": "Search Baidu for %s"
+    },
+    "search2": {
+        "message": "Search Google for %s"
     }
 }

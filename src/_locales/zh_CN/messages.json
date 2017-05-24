@@ -1,5 +1,8 @@
 {
-    "search": {
+    "search1": {
         "message": "使用百度搜索%s"
+    },
+    "search2": {
+        "message": "使用Google搜索%s"
     }
 }

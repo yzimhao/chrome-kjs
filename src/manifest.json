@@ -1,14 +1,24 @@
 {
   "name": "chrome-kjs",
   "description": "Web开发辅助插件，集成二维码、常见的加密方法...",
-  "version": "0.0.7",
+  "version": "0.1.1",
   "manifest_version": 2,
   "default_locale": "en",
+  "homepage_url": "https://chrome.google.com/webstore/detail/chrome-kjs/dffdfpjckicpnigcfjfkfooimeckmodm",
+  "options_ui": {
+      "page": "options.html",
+      "open_in_tab": false,
+      "chrome_style": true
+  },
   "permissions": [
+    "storage",
     "contextMenus",
     "tabs",
     "notifications",
     "cookies",
+    "webRequest",
+    "*://*/*",
+    "webRequestBlocking",
     "webNavigation"
   ],
 
