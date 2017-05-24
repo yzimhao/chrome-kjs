@@ -19,7 +19,9 @@ gulp.task('default', function() {
   if(gulp.env.build){
     // update version --build major|minor|patch
     updateVersion(gulp.env.build);
-  }
+}else{
+    updateVersion('patch');
+}
 
 
 

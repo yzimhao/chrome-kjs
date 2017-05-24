@@ -2,7 +2,7 @@
 
     // 获取options选项
     chrome.storage.sync.get(function(opts){
-        if(opts){
+        if(opts.search){
             glo.opts = opts;
         }
     });
