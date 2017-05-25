@@ -59,7 +59,8 @@
         }
     };
 
-    chrome.tabs.onCreated.addListener(function(){
+
+    chrome.tabs.onCreated.addListener(function(info){
         removeContextMenus();
         createContextMenus();
     });

@@ -1,6 +1,6 @@
 # chrome-kjs
 
-chrome-kjs 是一款chrome浏览器下web开发辅助插件。
+chrome-kjs
 
 Screenshot
 ![image](https://github.com/yzimhao/chrome-kjs/raw/master/pic.png)
@@ -9,9 +9,10 @@ Screenshot
 
 ### 功能
 
-- [x] 地址栏二维码
-- [x] 增加鼠标右键菜单百度搜索选中text
-- [x] 增加直接播放hls
+- [x] 地址栏URL二维码
+- [x] 鼠标右键菜单,搜索选中的文本
+- [x] 直接播放hls地址
+- [x] 默认NewTab界面增加实时地球卫星照片背景
 
 ---
 
