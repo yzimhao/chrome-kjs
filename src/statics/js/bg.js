@@ -19,6 +19,8 @@
         } else if(message.type == 'update_opts') {
             // 主动修改配置项
             glo.opts = message.data;
+        } else if(message.type == 'get_opts'){
+            sendResponse(glo.opts);
         }
     });
 

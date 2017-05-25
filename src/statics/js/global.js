@@ -8,6 +8,7 @@ var glo = {
 
     opts: {
         search: 1,
-        playhls: true
+        playhls: true,
+        newtabbeaut: true
     }
 };

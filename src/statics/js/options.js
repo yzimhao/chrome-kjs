@@ -4,7 +4,8 @@ console.log(glo.opts);
 function save_options() {
     var opts = {
         search: document.getElementById('search').value,
-        playhls: document.getElementById('playhls').checked
+        playhls: document.getElementById('playhls').checked,
+        newtabbeaut: document.getElementById('newtabbeaut').checked
     };
 
     chrome.storage.sync.set(opts, function() {
@@ -26,6 +27,7 @@ function restore_options() {
     chrome.storage.sync.get(glo.opts, function(items) {
         document.getElementById('search').value = items.search;
         document.getElementById('playhls').checked = items.playhls;
+        document.getElementById('newtabbeaut').checked = items.newtabbeaut;
     });
 }
 

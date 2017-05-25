@@ -35,30 +35,41 @@ function getBg(){
 }
 
 
-if (window.location.href.indexOf('chrome/newtab') > -1){
-    getBg();
-    setInterval(function(){
+function newTab(){
+    if (window.location.href.indexOf('chrome/newtab') > -1){
         getBg();
-    }, 60e3);
+        setInterval(function(){
+            getBg();
+        }, 60e3);
 
-    var ctr = {
-        isview: false,
-        init: function(){
-            var me = this,
-                div = document.getElementById('chrome_kj_bg');
-            document.body.ondblclick = function(){
-                if(!me.isview){
-                    div.style.zIndex = 9;
-                    div.style.opacity = 1;
-                    me.isview = true;
-                }else{
-                    div.style.zIndex = -1;
-                    div.style.opacity = 0.9;
-                    me.isview = false;
-                }
-            };
-        }
-    };
-    ctr.init();
+        var ctr = {
+            isview: false,
+            init: function(){
+                var me = this,
+                    div = document.getElementById('chrome_kj_bg');
+                document.body.ondblclick = function(){
+                    if(!me.isview){
+                        div.style.zIndex = 9;
+                        div.style.opacity = 1;
+                        me.isview = true;
+                    }else{
+                        div.style.zIndex = -1;
+                        div.style.opacity = 0.9;
+                        me.isview = false;
+                    }
+                };
+            }
+        };
+        ctr.init();
 
+    }
 }
+
+
+(function(){
+    chrome.runtime.sendMessage({type:'get_opts'}, function(response){
+        if(response.newtabbeaut){
+            newTab();
+        }
+    })
+})()
